@@ -12,6 +12,7 @@
 		081CF8AF1D34BA600095C5E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081CF8AD1D34BA600095C5E2 /* Main.storyboard */; };
 		081CF8B11D34BA600095C5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081CF8B01D34BA600095C5E2 /* Assets.xcassets */; };
 		081CF8B41D34BA600095C5E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081CF8B21D34BA600095C5E2 /* LaunchScreen.storyboard */; };
+		081CF8BE1D34C8560095C5E2 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 081CF8BD1D34C8560095C5E2 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		081CF8B01D34BA600095C5E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		081CF8B31D34BA600095C5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		081CF8B51D34BA600095C5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		081CF8BB1D34C8550095C5E2 /* MyRunloop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyRunloop-Bridging-Header.h"; sourceTree = "<group>"; };
+		081CF8BC1D34C8560095C5E2 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		081CF8BD1D34C8560095C5E2 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,9 @@
 				081CF8B01D34BA600095C5E2 /* Assets.xcassets */,
 				081CF8B21D34BA600095C5E2 /* LaunchScreen.storyboard */,
 				081CF8B51D34BA600095C5E2 /* Info.plist */,
+				081CF8BC1D34C8560095C5E2 /* Student.h */,
+				081CF8BD1D34C8560095C5E2 /* Student.m */,
+				081CF8BB1D34C8550095C5E2 /* MyRunloop-Bridging-Header.h */,
 			);
 			path = MyRunloop;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 			files = (
 				081CF8AC1D34BA600095C5E2 /* ViewController.swift in Sources */,
 				081CF8AA1D34BA600095C5E2 /* AppDelegate.swift in Sources */,
+				081CF8BE1D34C8560095C5E2 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +257,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyRunloop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.empty.product.MyRunloop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyRunloop/MyRunloop-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +271,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyRunloop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.empty.product.MyRunloop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyRunloop/MyRunloop-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +299,7 @@
 				081CF8BA1D34BA600095C5E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

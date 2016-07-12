@@ -41,8 +41,15 @@ class ViewController: UIViewController {
             
             
         }
-        //结论：每个线程都会有一个runloop对象  自己创建的线程默认都是没有启动的
+        //结论：1.每个线程都会有一个runloop对象  自己创建的线程默认都是没有启动的  2.在子线程中的timer函数要加到runloop中否则计时器将不会启动
         
+        
+        
+        //此时已经进行了一次深复制
+        let stu = Student()
+        let stu1 = stu.copy()
+        
+        print("++++++", stu, stu1)
         
     }
     func text() -> Void {
